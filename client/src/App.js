@@ -1,11 +1,13 @@
-import React from "react";
+import React, { Fragment} from "react";
+import Router from "./router/Router"
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1> Previously</h1>
-    </div>
+    <Fragment>
+      <Router />
+    </Fragment>
+
   );
 }
 

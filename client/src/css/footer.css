@@ -1,0 +1,11 @@
+.footer{
+    display: flex;
+    background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+    padding: 3%;
+    color: black;
+}
+
+.copyright{
+    text-align: center;
+
+}
