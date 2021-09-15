@@ -1,6 +1,7 @@
 
 import React, { Fragment } from 'react';
 import { BrowserRouter, Route, Switch,} from "react-router-dom";
+import Home from '../views/Home';
 import Footer from '../components/Footer';
 import Navbar from "../components/Navbar"
 
@@ -15,7 +16,7 @@ const AppRouter = () => {
                 <Navbar />
 
                 <Switch>
-                    {/* <Route path='/' component={Home} exact={true} /> */}
+                    <Route path='/' component={Home} exact={true} />
                 </Switch>
                 <Footer />
             </Fragment>
