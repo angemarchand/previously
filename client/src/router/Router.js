@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch,} from "react-router-dom";
 import Home from '../views/Home';
 import Footer from '../components/Footer';
 import Navbar from "../components/Navbar"
+import OneSerie from '../components/OneSerie';
 
 
 const AppRouter = () => {
@@ -17,6 +18,7 @@ const AppRouter = () => {
 
                 <Switch>
                     <Route path='/' component={Home} exact={true} />
+                    <Route path="/serie/:id" component={OneSerie} />
                 </Switch>
                 <Footer />
             </Fragment>
