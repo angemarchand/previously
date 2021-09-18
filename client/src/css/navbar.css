@@ -1,6 +1,14 @@
 .linkNav{
-    margin-left: 15%;
+    color: white !important;
+}
+.logo{
+    color: white !important;
+    margin-right: 20%;
+    font-weight: bold;
 }
 .bgNav{
-    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%) !important;
+    background: linear-gradient(120deg, #140413 0%, #0c0505 100%) !important;
+}
+.bugerIcon{
+    background-color: white;
 }

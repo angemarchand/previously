@@ -23,7 +23,7 @@ function OneSerie (props) {
             Axios.get("https://api.betaseries.com/shows/display?v=3.0&id=" + Params, {
                 params: {key: "1a4116396d60"}
             }).then((response) => {
-                console.log(response);
+                // console.log(response);
                 let serie = response.data.show;
                 console.log(serie);
 

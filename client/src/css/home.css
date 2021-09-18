@@ -1,0 +1,16 @@
+body{
+    background-color: black ;
+    /* background: linear-gradient(90deg, #0c020b 0%, #130d00 100%) !important; */
+}
+h1{
+    color: cornsilk;
+}
+/* .banner{
+    background-image: url("../assets/solarBg.jpg");
+    background-size: cover;
+} */
+
+.title{
+    color: white;
+    text-align: center;
+}
