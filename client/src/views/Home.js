@@ -19,6 +19,7 @@ function Home (props) {
         console.log(param)
         let tokenParam = param[0].replace('?', '');
         console.log(tokenParam);
+
         if(tokenParam) {
             localStorage.setItem("token", param[1]);
             history.push("/");

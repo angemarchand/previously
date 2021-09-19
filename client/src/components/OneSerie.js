@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
+import "../css/serie.css"
 
 
 function OneSerie (props) {
@@ -58,7 +59,10 @@ function OneSerie (props) {
         Kind.forEach(element => {
             console.log(element)
             arrayKinds.push(
-                <li className="list-group-item" key={Math.random().toString(36).substring(7)} id={element.id}> {element} </li>
+                <li className="list-group-item bg-warning mb-2 rounded-0" 
+                    key={Math.random().toString(36).substring(7)} 
+                    id={element.id}> {element} 
+                </li>
             )
             
         })
@@ -69,32 +73,35 @@ function OneSerie (props) {
                 <h1 className="d-flex justify-content-center"> {title} </h1>
                 <img className="card-img-top mt-4 mb-5" src={img} alt="" />
                 <div className=" row d-flex justify-content-center">
-                    <div className="col-4 mb-4">
-                        <div className="items-align-center me-4">
+                    <div className="col-4 mb-4 bg-dark text-white me-4 p-4">
+                        <div className="items-align-center textColor me-4">
                             <h6>Nombre de saisons : {seasons}</h6>
                         </div>
-                        <div className="items-align-center me-4">
+                        <div className="items-align-center textColor me-4">
                             <h6>Nombre d'épisode : {nbrEpisode} </h6>
                         </div>
-                        <div className="items-align-center me-4">
+                        <div className="items-align-center textColor me-4">
                             <h6>Durée des épisodes : {durationEpi} </h6>
                         </div>
-                        <div className="items-align-center me-4">
+                        <div className="items-align-center textColor me-4">
                             <h6>La note : {note} </h6>
                         </div>
-                        <div className="items-align-center me-4">
-                            <h6>Les genres </h6>
-                            <ul className="list-group" >
+                        <div className="items-align-center textColor mt-4 me-4">
+                            <h6>Les genres : </h6>
+                            <ul className="list-group text-uppercase" >
                                 {arrayKinds}
                             </ul>
                         </div>
+                        <div className="d-flex justify-content-center"> 
+                            <Link to="#" className="btn btn-warning rounded-0 mb-5 mt-5"> Archiver la série </Link> 
+                        </div>
                     </div>
-                    <div className="col mb-3">
+                    <div className="col mb-3 text-white bg-dark p-5 desc">
                         <p>{desc}</p>
                     </div>
                 </div>
                 
-                <div> <Link to="#" className="btn btn-primary mb-5"> Archiver la série </Link> </div>
+                
             </div>
         )
 

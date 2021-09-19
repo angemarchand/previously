@@ -33,7 +33,7 @@ app.post("/logout", function (req, res) {
 
 
 // Pour ajouter au favori une serie 
-app.post('/addarchive', function (req, res) {
+app.post('/archive', function (req, res) {
     let id = req.body.id_serie
     let user_token = req.body.user_token
     axios.defaults.headers.common['x-betaseries-key'] = "1a4116396d60";
@@ -47,15 +47,6 @@ app.post('/addarchive', function (req, res) {
     
 });
 
-// Pour rechercher toutes les infos sur une serie
-app.get("/research", function (req, res) {
-    let id = req.body.id
-    axios.defaults.headers.common['x-betaseries-key'] = "1a4116396d60";
-    axios.get("https://api.betaseries.com/shows/display?id=" + id.toString(), {
-    }).then(response => {
-        res.send(response.data)
-    })
-})
 
 // Pour recuperer les 20 premiere serie 
 app.get('/series', function (req, res) {
@@ -73,7 +64,7 @@ app.get('/series', function (req, res) {
 app.get('/showSerie', function (req, res) {
     let data = req.query
     axios.defaults.headers.common['x-betaseries-key'] = "1a4116396d60";
-    axios.get('http://api.betaseries.com/search/shows?v=3.0&text=' + data.query, {
+    axios.get('http://api.betaseries.com/search/shows?v=3.0&id=' + data.query, {
     }).then((response) => {
         let tab = response.data.shows
         return res.status(200).send(tab)
@@ -83,16 +74,6 @@ app.get('/showSerie', function (req, res) {
 })
 
 
-// Pour recuperer tous les episode d'une saison
-app.post("/showAll", function(req, res) {
-    let id_season = req.body.id_season
-    let id_serie = req.body.id_serie
-    axios.defaults.headers.common['x-betaseries-key'] = "1a4116396d60";
-    axios.get("https://api.betaseries.com/shows/episodes?id=" + id_serie.toString() + "&season=" + id_season.toString(), {
-    }).then(response => {
-        res.send(response.data)
-    })
- })
 
 
 module.exports = app;

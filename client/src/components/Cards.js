@@ -11,8 +11,10 @@ function Cards (data) {
                 <img className="card-img-top rounded-0" src={data.data.poster} alt="" />
                 <div className="card-body">
                     <h5 className="card-title title">{data.data.title}</h5>
-                    {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                    <Link to={"/serie/" + data.data.id} className="btn btn-warning rounded-0 d-flex mt-3 justify-content-center">Go to serie </Link>
+                    <div className="d-flex justify-content-center">
+                        <Link to={"/serie/" + data.data.id} className="btn btn-warning rounded-0 mt-3">Go to serie </Link>
+                    </div>
+                    
                 </div>
             </div>
         </Fragment>
